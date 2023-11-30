@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    <p id="timer">30</p>
+    <button id="startButton">Start Countdown</button>
+
+    <script>
+        let countdown;
+        const timerDisplay = document.getElementById('timer');
+        const startButton = document.getElementById('startButton');
+
+        function startCountdown() {
+            let seconds = 30;
+
+            countdown = setInterval(function() {
+                if (seconds <= 0) {
+                    clearInterval(countdown);
+                    timerDisplay.textContent = 'Countdown Complete';
+                    startButton.disabled = false;
+                } else {
+                    timerDisplay.textContent = seconds;
+                    seconds--;
+                }
+            }, 1000);
+
+            startButton.disabled = true;
+        }
+
+        startButton.addEventListener('click', startCountdown);
+    </script>
+</body>
+</html>
+<!-- This code will create a countdown timer that starts at 30 seconds when you click the "Start Countdown" button and updates the display every second until the countdown is complete. When the countdown reaches 0, it displays "Countdown Complete" and re-enables the "Start Countdown" button. -->
+
+
+
+
+

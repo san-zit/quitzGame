@@ -1,0 +1,30 @@
+h1 {
+}
+.main-section {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+.main {
+  /* justify-content: center; */
+  background-color: green;
+  color: white;
+  height: 35vh;
+  width: 80vh;
+  padding-left: 3.5rem;
+  padding-top: 2rem;
+}
+input {
+  color: red;
+  text-decoration: double;
+}
+.button {
+  cursor: pointer;
+  border: solid;
+  border-radius: 20%;
+  color: black;
+  
+}
+.button:hover{
+    color: red;
+}
